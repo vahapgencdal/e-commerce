@@ -7,10 +7,10 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 
 @EnableConfigServer
 @SpringBootApplication
-public class EcommerceSpringCloudConfigServerApplication {
+public class ConfigServerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EcommerceSpringCloudConfigServerApplication.class, args);
+		SpringApplication.run(ConfigServerApplication.class, args);
 	}
 
 }
