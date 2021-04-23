@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: access-service
+  profiles:
+    active: DEV
+    
+server:
+  port: ${port:8100}
+ 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh

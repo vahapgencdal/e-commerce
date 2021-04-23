@@ -1,13 +1,14 @@
-package com.ecommerce.microservices.product;
+package com.ecommerce.microservices.access;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+
 @SpringBootApplication
-public class ProductServiceApplication {
+public class AccessServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProductServiceApplication.class, args);
+		SpringApplication.run(AccessServiceApplication.class, args);
 	}
 
 }

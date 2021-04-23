@@ -1,6 +1,7 @@
+
 spring:
   application:
     name: product-service
 
 server:
-  port: ${port:8100}
+  port: ${port:8800}

@@ -1,4 +1,4 @@
-package com.ecommerce.microservices.product.beans;
+package com.ecommerce.microservices.access.beans;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
