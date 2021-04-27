@@ -1,13 +1,13 @@
-CREATE SCHEMA  IF NOT EXISTS `ec_products`;
-USE `ec_products`;
+CREATE SCHEMA  IF NOT EXISTS `ec_orders`;
+USE `ec_orders`;
 
 
-CREATE TABLE products (
+CREATE TABLE orders (
   id BIGINT NOT NULL AUTO_INCREMENT,
-  name VARCHAR(255) NOT NULL,
-  description VARCHAR(255) NOT NULL,
+  product_id BIGINT NOT NULL,
+  customer_id BIGINT NOT NULL,
   quantity INTEGER NOT NULL,
-  price    DOUBLE NOT NULL,
+  amount    DOUBLE NOT NULL,
   is_active BIT  NOT NULL,
   created_at DATE NOT NULL,
   created_by BIGINT NOT NULL,

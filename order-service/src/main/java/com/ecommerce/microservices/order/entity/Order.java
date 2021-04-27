@@ -23,11 +23,14 @@ public class Order {
 	@Column(name = "PRODUCT_ID", nullable = false)
     private Long productId;
 	
-    @Column(name = "AMOUNT", nullable = false)
-    private Integer amount;
+	@Column(name = "CUSTOMER_ID", nullable = false)
+    private Long customerId;
+	
+    @Column(name = "QUANTITY", nullable = false)
+    private Integer quantity;
     
-    @Column(name = "PRICE", nullable = false)
-    private BigDecimal price;
+    @Column(name = "AMOUNT", nullable = false)
+    private BigDecimal amount;
     
     @Column(name = "IS_ACTIVE")
     private Boolean isActive = Boolean.TRUE;

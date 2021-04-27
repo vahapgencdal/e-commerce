@@ -14,7 +14,7 @@ import com.ecommerce.microservices.product.entity.Product;
 import com.ecommerce.microservices.product.service.ProductService;
 
 @RestController
-@RequestMapping("/api/v1/products")
+@RequestMapping("api/v1/products")
 public class ProductController {
 	
 	private final ProductService productService;
@@ -26,7 +26,7 @@ public class ProductController {
 	}
 	
 	
-	@GetMapping(value = "/")
+	@GetMapping
     public ResponseEntity<List<Product>> productList() {
 
         List<Product> productList = productService.findAll();
