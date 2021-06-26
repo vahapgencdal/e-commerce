@@ -1,6 +1,7 @@
 package com.ecommerce.microservices.product.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,12 +20,14 @@ public class ProductServiceImpl implements ProductService{
 		this.productRepository = productRepository;
 	}
 
-
-
-
 	@Override
 	public List<Product> findAll() {
 		return productRepository.findAll();
+	}
+
+	@Override
+	public Optional<Product> findById(Long productId) {
+		return productRepository.findById(productId);
 	}
 
 }

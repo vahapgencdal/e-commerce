@@ -1,7 +1,8 @@
-
 spring:
   application:
     name: order-service
-
+  jpa:
+    hibernate:
+      ddl-auto: none
 server:
   port: ${port:8900}

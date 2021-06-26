@@ -23,8 +23,8 @@ public class Product {
 	@Column(name = "NAME", nullable = false)
     private String name;
 	
-	@Column(name = "desc", nullable = false)
-    private String DESC;
+	@Column(name = "DESCRIPTION", nullable = false)
+    private String description;
 	
 	@Column(name = "QUANTITY", nullable = false)
     private Integer quantity;

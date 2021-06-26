@@ -1,7 +1,9 @@
-
 spring:
   application:
     name: product-service
-
+  jpa:
+    hibernate:
+      ddl-auto: none  
 server:
   port: ${port:8800}
+  
