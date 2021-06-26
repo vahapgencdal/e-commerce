@@ -15,6 +15,7 @@ public class ProductDto {
     private Integer quantity;
     private BigDecimal price;
     private Boolean isActive;
+    private int serverPort;
     
     
     public static ProductDto toDto(Product product) {
@@ -26,7 +27,6 @@ public class ProductDto {
     	productDto.setQuantity(product.getQuantity());
     	productDto.setPrice(product.getPrice());
     	productDto.setIsActive(product.getIsActive());
-    	
     	return productDto;
     	
     }

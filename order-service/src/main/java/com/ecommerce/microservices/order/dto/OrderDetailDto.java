@@ -3,7 +3,7 @@ package com.ecommerce.microservices.order.dto;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-import com.ecommerce.microservices.client.bean.ProductBean;
+import com.ecommerce.microservices.order.client.bean.ProductBean;
 import com.ecommerce.microservices.order.entity.Order;
 
 import lombok.Data;

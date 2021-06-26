@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.CollectionUtils;
@@ -21,11 +22,14 @@ import com.ecommerce.microservices.product.service.ProductService;
 public class ProductController {
 	
 	private final ProductService productService;
+	
+    private final Environment environment;
 
 	@Autowired
-	public ProductController(ProductService productService) {
+	public ProductController(ProductService productService, Environment environment) {
 		super();
 		this.productService = productService;
+		this.environment = environment;
 	}
 	
 	
@@ -43,9 +47,12 @@ public class ProductController {
     public ResponseEntity<ProductDto> findProductById(@PathVariable Long productId) {
 
          Optional<Product> product = productService.findById(productId);
+         
+         ProductDto productDto = ProductDto.toDto(product.get());
+         productDto.setServerPort(Integer.parseInt(environment.getProperty("local.server.port")));
         
         return product.isPresent() ?
-        		new ResponseEntity<>(ProductDto.toDto(product.get()), HttpStatus.OK):
+        		new ResponseEntity<>(productDto, HttpStatus.OK):
                 new ResponseEntity<>(HttpStatus.NO_CONTENT) ;
                 
     }

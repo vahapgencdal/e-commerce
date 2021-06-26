@@ -1,13 +1,13 @@
-package com.ecommerce.microservices.client;
+package com.ecommerce.microservices.order.client;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import com.ecommerce.microservices.client.bean.ProductBean;
+import com.ecommerce.microservices.order.client.bean.ProductBean;
 
-@FeignClient(name="product-service", url="localhost:8800")
-//@FeignClient(name="product-service")//if you define load balancer settings
+//@FeignClient(name="product-service", url="localhost:8800")
+@FeignClient(name="product-service")//if you define load balancer settings
 public interface ProductServiceClient {
 
 	

@@ -1,4 +1,4 @@
-package com.ecommerce.microservices.client.bean;
+package com.ecommerce.microservices.order.client.bean;
 
 import java.math.BigDecimal;
 
@@ -13,5 +13,6 @@ public class ProductBean {
     private Integer quantity;
     private BigDecimal price;
     private Boolean isActive;
+    private int serverPort;
    
 }
