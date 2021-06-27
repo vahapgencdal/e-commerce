@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: zuul-api-gateway-server
+    
+server:
+  port: ${port:8765}
+  
+zuul:
+  routes:
+    order-service: /order-service/**
+    url: http://localhost:8900
+    

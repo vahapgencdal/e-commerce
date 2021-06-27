@@ -7,6 +7,6 @@ spring:
 server:
   port: ${port:8900}
   
-product-service:
-  ribbon:
-    listOfServers: http://localhost:8800, http://localhost:8801
+#product-service://after eureka naming server ribbon will find both instances automatically
+#  ribbon:
+#    listOfServers: http://localhost:8800, http://localhost:8801
